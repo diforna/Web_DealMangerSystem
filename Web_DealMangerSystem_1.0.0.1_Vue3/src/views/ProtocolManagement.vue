@@ -190,11 +190,16 @@
           <el-row :gutter="20">
             <el-col :span="12">
               <el-form-item label="产品类别" prop="product_category">
-                <el-input 
-                  v-model="newProtocol.product_category" 
-                  placeholder="请输入产品类别"
+                <el-select 
+                placeholder="请选择产品类型"
+                v-model="newProtocol.product_category" 
+                  style="width: 100%"
                   clearable
-                />
+                >
+                  <el-option label="系统" value="系统" />
+                  <el-option label="人体存在" value="人体存在" />
+                  <el-option label="轨迹协议" value="轨迹协议" />
+                </el-select>
               </el-form-item>
             </el-col>
             <el-col :span="12">
@@ -205,9 +210,11 @@
                   style="width: 100%"
                   clearable
                 >
-                  <el-option label="上行" value="上行" />
-                  <el-option label="下行" value="下行" />
-                  <el-option label="双向" value="双向" />
+                  <el-option label="主动上报" value="主动上报" />
+                  <el-option label="设置" value="设置" />
+                  <el-option label="设置回复" value="设置回复" />
+                  <el-option label="查询" value="查询" />
+                  <el-option label="查询回复" value="查询回复" />
                 </el-select>
               </el-form-item>
             </el-col>
